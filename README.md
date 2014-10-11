@@ -10,4 +10,4 @@ Tabla de Contenido
 * [Capitulo 2 - Comandos Basicos de Git](Capitulo 2/README.md)
 * [Capitulo 3 - Git Branching](Capitulo 3/README.md)
 * [Capitulo 4 - Git Distribuido](Capitulo 4/README.md)
-* Appendice A - Recuersos Adicionales
+* [Appendice A - Recuersos Adicionales](Appendice A/README.md)

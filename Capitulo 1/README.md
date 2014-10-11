@@ -1,5 +1,3 @@
-# Por donde empezar 
-===================
 
 ## Que es Version Control 
 
@@ -27,7 +25,7 @@ Desde el 2005, Git ha evolucionado y madurado, y aun conserva todas la caracteri
 3. Git tiene integridad (todas las operaciones hace check-summed , SHA-1)
 
 
-### Los 3 estados 
+## Los 3 estados (Commited, Modified, Staged) 
 
 Esta es la parte mas importante de Git, si comprenden los estados de Git su aprendizaje para sobre el resto del material sera muy sencillo.
 
@@ -46,9 +44,6 @@ __Staged__ : Significa que has marcado un archivo modificado en la version actua
 <img src="Operacion_Locales.png" width="450">
 
 Todos estos estados se manejan en el directorio de Git. En el directorio Git es donde el sistema guarda la metadata y los objectos de la base de datos. Esto es lo mas importante de Git y es lo que se copia cuando se clona un projecto. 
-
-
-
 
 ## Installar Git 
 

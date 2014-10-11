@@ -37,13 +37,18 @@ Git tiene principalmente 3 estados (stages) donde tus archivos pueden estar.
 * Modified
 * Staged
 
-Commited : Significan que la data esta guardad en tu base de datos local.
+__Commited__ : Significan que la data esta guardad en tu base de datos local.
 
-Modified : Significa que tu has modificado un archivo y no lo has guardado (Commited) aun.
+__Modified__ : Significa que tu has modificado un archivo y no lo has guardado (Commited) aun.
 
-Staged : Significa que has marcado un archivo modificado en la version actual para ser considerado para el siguiente foto.
+__Staged__ : Significa que has marcado un archivo modificado en la version actual para ser considerado para el siguiente foto.
+
+<img src="Operacion_Locales.png" width="450">
 
 Todos estos estados se manejan en el directorio de Git. En el directorio Git es donde el sistema guarda la metadata y los objectos de la base de datos. Esto es lo mas importante de Git y es lo que se copia cuando se clona un projecto. 
+
+
+
 
 ## Installar Git 
 

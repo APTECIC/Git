@@ -192,7 +192,7 @@ $ git config user.name
 
 ##Manual de Ayuda
 
-Para obtener ayuda en como usar Git, siempre esta disponible la instruccion __git help <verb>__ para ver documentacion.
+Para obtener ayuda en como usar Git, siempre esta disponible la instruccion __git help < verb >__ para ver documentacion.
 
 ```
 $ git help config

@@ -120,7 +120,7 @@ Para usuarios de Windows pueden descargar en installador desde la pagina de [htt
 Para asegurarse que git a sido installado appropiadamente. Abran un ventana de linea commando (Terminal para Unix o para Window git-shell). Escriban la siguiente sentencia 
 
 ```
-git --version
+$ git --version
 ```
 
 Como respuesta les debe de mostrar la version de su instalacion de Git. Y asi se aseguran que Git esta installado correctamente.
@@ -129,24 +129,71 @@ Como respuesta les debe de mostrar la version de su instalacion de Git. Y asi se
 
 Ahora que ya tenemos instalado git tenemos que realizar un pequeño setup. Esta configuracion solamente la tienes que hacer una vez, estos cambios se conservan a pesar de las actualizaciones que hagas de Git en el futuro y puedes cambiar la configuracion en cualquier momento.
 
-Git viene con una herramienta llamado __git config__ que permite configurar variables que controlan como opera y se visualiza git. Estas variables se pueden almazenar en 3 diferentes lugars:
+Git viene con una herramienta llamado __git config__ que permite configurar variables que controlan como opera y se visualiza git. Estas variables se pueden almazenar en 3 diferentes lugares:
 
 * __/etc/gitconfig__ : Contiene variables para cada usuario en el systema y todos los repositorios. Si pasas la opcion the __--system__ escribira las variables en el archivo de configuracion.
 
+__Nota__ : En Windows seria "C:\Program Files\Git\etc\gitconfig"
+
 ```
-git config --system [opcion]
+$ git config --system [opcion]
 ```
 
 * __~/.gitconfig__ : Este archivo contiene variables a nivel de usuario. Si pasas la opcion the __--global__ escribira las variables en el archivo de configuracion.
 
-```
-git config --global [opcion]
-```
-
-* Archivo de configuracion a nivel repositorio (.git/config), este archivo se crea para cada repositorio.
-
 __Nota__: Para sistemas Windows, Git busca por el archivo __.gitconfig__ en el path $HOME (C:\Document and Settings\$USER).
 
+```
+$ git config --global [opcion]
+```
 
+* Archivo de configuracion a nivel repositorio (nombre_proyecto/.git/config), este archivo se crea para cada repositorio.
 
+###Configurar tu identidad
 
+Lo primero que se tiene que configurar es tu identidad en Git (nombre y correo electronico). Esto es importante por que en cada Git Commit utiliza esta informacion, y es inmutable cuando compartes los Commits:
+
+```
+$ git config --global user.name "Nombre Apellido"
+$ git config --global user.email "mycorreo@domino.com"
+```
+
+###Configurar el Editor para Git
+
+Git necesita tener configurado un editor de Texto por default en caso de que Git requiera que escribas un mensaje. Para configurar puedes usar una de las opciones que mostramos a continuacion:
+
+```
+[Para Windows]
+$ git config --global core.editor "notepad.exe"
+[Para Unix OS]
+$ git config --global core.editor "nano"
+$ git config --global core.editor "vim"
+$ git config --global core.editor "emacs"
+```
+
+###Configurar Git para que use Colores
+
+Si no te gusta ver informacion monocromatica en tu terminal puedes configurar Git para que te muestre su informacion en colores. Esto es realmente util para identificar rapidamente en que estado se encuentra nuestros archivos.
+
+```
+$ git config --global color.ui true
+```
+
+###Revisar las variables 
+
+Para ver tu configuracion puede usar esta instruccion : 
+```
+$ git config --list
+```
+o puedes verlo a nivel variable (__git config {key}__):
+```
+$ git config user.name
+```
+
+##Manual de Ayuda
+
+Para obtener ayuda en como usar Git, siempre esta disponible la instruccion __git help <verb>__ para ver documentacion.
+
+```
+$ git help config
+```

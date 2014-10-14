@@ -1,5 +1,5 @@
 
-## Que es Version Control 
+##Que es Version Control 
 
 Que es version control y por que deberia de interesarles ?. Version Cotrol es un sistema que registra cambios en un archivo o un conjunto archivos atravez del timepo. 
 
@@ -114,6 +114,38 @@ __Nota__: Por default la opcion de auto-completar no esta habilitada. Pera resol
 
 Para usuarios de Windows pueden descargar en installador desde la pagina de [http://git-scm.com/download/win](http://git-scm.com/download/win). 
 
+
+###Probar git 
+
+Para asegurarse que git a sido installado appropiadamente. Abran un ventana de linea commando (Terminal para Unix o para Window git-shell). Escriban la siguiente sentencia 
+
+```
+git --version
+```
+
+Como respuesta les debe de mostrar la version de su instalacion de Git. Y asi se aseguran que Git esta installado correctamente.
+
+## Configuracion de Git 
+
+Ahora que ya tenemos instalado git tenemos que realizar un pequeño setup. Esta configuracion solamente la tienes que hacer una vez, estos cambios se conservan a pesar de las actualizaciones que hagas de Git en el futuro y puedes cambiar la configuracion en cualquier momento.
+
+Git viene con una herramienta llamado __git config__ que permite configurar variables que controlan como opera y se visualiza git. Estas variables se pueden almazenar en 3 diferentes lugars:
+
+* __/etc/gitconfig__ : Contiene variables para cada usuario en el systema y todos los repositorios. Si pasas la opcion the __--system__ escribira las variables en el archivo de configuracion.
+
+```
+git config --system [opcion]
+```
+
+* __~/.gitconfig__ : Este archivo contiene variables a nivel de usuario. Si pasas la opcion the __--global__ escribira las variables en el archivo de configuracion.
+
+```
+git config --global [opcion]
+```
+
+* Archivo de configuracion a nivel repositorio (.git/config), este archivo se crea para cada repositorio.
+
+__Nota__: Para sistemas Windows, Git busca por el archivo __.gitconfig__ en el path $HOME (C:\Document and Settings\$USER).
 
 
 

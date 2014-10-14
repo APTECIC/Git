@@ -47,5 +47,74 @@ Todos estos estados se manejan en el directorio de Git. En el directorio Git es 
 
 ## Installar Git 
 
+Ahora que entendemos los beneficios de Git y su estructura. A continuacion te vamos a mostrar los pasos para installar Git. Nosotros vamos a mostrar el proceso de installacion para los sistemas operativos mas populares (OS X, Linux, Windows). 
+
+Si por alguna razon quieren realizar una installacion desde el codigo fuente lo pueden descargar de la pagina de GitHub [https://github.com/git/git](https://github.com/git/git)
+
+###Instalacion en Linux 
+
+Para installar en Linux es bien sencillo a travez del "Package Manager":
+
+__Debian/Ubuntu__
+```
+$ apt-get install git
+```
+
+__Fedora__
+```
+$ yum install git
+```
+
+__Gentoo__
+```
+$ emerge --ask --verbose dev-vcs/git
+```
+
+__Arch Linux__
+```
+$ pacman -S git
+```
+
+__openSUSE__
+```
+$ zypper install git
+```
+
+__FreeBSD__
+```
+$ cd /usr/ports/devel/git
+$ make install
+```
+
+__Solaris 11 Express__
+```
+$ pkg install developer/versioning/git
+```
+
+__OpenBSD__
+```
+$ pkg_add git 
+```
+__Nota__: Por default la opcion de auto-completar no esta habilitada. Pera resolver este problema puede usar lo pasos que se encuentran en el siguiente link : [http:blog.jacovarrubias.com](http://blog.jacovarrubias.com/post/99660637170/how-to-add-auto-completion-to-git) 
+
+
+###Instalacion en OS X
+
+Para usuario de la pueden hacer su installacion desde el Codigo Fuente o pueden descargalo desde el siguiente URL [http://git-scm.com/download/mac](http://git-scm.com/download/mac).
+
+Otra opcion es usando [MacPorts](http://www.macports.org).
+
+```
+$sudo port install git-core
+```
+
+__Nota__: Por default la opcion de auto-completar no esta habilitada. Pera resolver este problema puede usar lo pasos que se encuentran en el siguiente link : [http:blog.jacovarrubias.com](http://blog.jacovarrubias.com/post/99660637170/how-to-add-auto-completion-to-git) 
+
+###Instalacion en Windows
+
+Para usuarios de Windows pueden descargar en installador desde la pagina de [http://git-scm.com/download/win](http://git-scm.com/download/win). 
+
+
+
 
 

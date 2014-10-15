@@ -33,3 +33,7 @@ Por default , git va a crear un folder con el nombre del proyecto, pero si lo de
 $ git clone https://github.com/APTECIC/Git.git miCursoGit
 ```
 Esta instruccion hace lo mismo que la anterio, pero el nombre del folder se a ser __myCursoGit__
+
+__Nota__ : Git puede utilizar varios tipo de protocolos de transmision. En los ejemplos utilizamos el protocolo __https__ pero tambien puede utilizar __git://, http:// o usuario@servidor:/path.git__ el cual usa SSH.
+
+  

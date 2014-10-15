@@ -1,6 +1,6 @@
 ## Inicializar un Repositorio Git
 
-Para poder utilizar todos los beneficios de Git primeramente tenemos que inicializar un repositorio. Tenemos dos opciones para hacerlo, numero uno es inicializar el repositorio desde un projecto existente o directorio local he importalo a Git y numero dos es mediante una clonacion de un proyecto existente en un servidor remote.
+Para poder utilizar todos los beneficios de Git primeramente tenemos que inicializar un repositorio. Tenemos dos opciones para hacerlo, numero uno es inicializar el repositorio desde un projecto existente o directorio local he importalo a Git y numero dos es mediante una clonacion de un proyecto existente en un servidor remoto.
 
 ###Inicializar un Repositorio desde un Directorio Existente
 
@@ -19,3 +19,17 @@ __Nota__: Cabe mencionar que en este punto ningun archivo esta siendo monitoriad
 
 ### Clonar un repositorio existente 
 
+Si quieres obtener una copia de un repositorio ya existente (Por ejemplo un proyecto Open Source), el comando que necesitas utilizar es __$ git clone__ . Al ejecutar esta instruccion Git copiara todos los archivos de Repositorio remoto (Historia, version y mas).
+
+La instruccion completa para clonar el repositorio es __$ git clone [url]__ . Por ejemplo si queremos copiar la documentacion de este curso lo pueden hacer con siguiente instruccion:
+
+```
+$ git clone https://github.com/APTECIC/Git.git
+```
+
+Por default , git va a crear un folder con el nombre del proyecto, pero si lo deseamos podemos cambiar el nombre del folder desde un inicio.
+
+```
+$ git clone https://github.com/APTECIC/Git.git __miCursoGit__
+```
+Esta instruccion hace lo mismo que la anterio, pero el nombre del folder se a ser __myCursoGit__

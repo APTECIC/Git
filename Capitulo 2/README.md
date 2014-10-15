@@ -29,7 +29,7 @@ $ git clone https://github.com/APTECIC/Git.git
 
 Por default , git va a crear un folder con el nombre del proyecto, pero si lo deseamos podemos cambiar el nombre del folder desde un inicio.
 
-```
-$ git clone https://github.com/APTECIC/Git.git <b>miCursoGit</b>
+```git
+$ git clone https://github.com/APTECIC/Git.git miCursoGit
 ```
 Esta instruccion hace lo mismo que la anterio, pero el nombre del folder se a ser __myCursoGit__

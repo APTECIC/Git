@@ -1,4 +1,4 @@
-## Inicializar un Repositorio Git
+#Inicializar un Repositorio Git
 
 Para poder utilizar todos los beneficios de Git primeramente tenemos que inicializar un repositorio. Tenemos dos opciones para hacerlo, numero uno es inicializar el repositorio desde un projecto existente o directorio local he importalo a Git y numero dos es mediante una clonacion de un proyecto existente en un servidor remoto.
 
@@ -35,5 +35,11 @@ $ git clone https://github.com/APTECIC/Git.git miCursoGit
 Esta instruccion hace lo mismo que la anterio, pero el nombre del folder se a ser __myCursoGit__
 
 __Nota__ : Git puede utilizar varios tipo de protocolos de transmision. En los ejemplos utilizamos el protocolo __https__ pero tambien puede utilizar __git://, http:// o usuario@servidor:/path.git__ el cual usa SSH.
+
+#Guardar los Cambios en el Repositorio Git
+
+
+
+<img src="git-lifecycle.png" width="600">
 
   

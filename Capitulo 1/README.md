@@ -155,7 +155,7 @@ Lo primero que se tiene que configurar es tu identidad en Git (nombre y correo e
 
 ```
 $ git config --global user.name "Nombre Apellido"
-$ git config --global user.email "mycorreo@domino.com"
+$ git config --global user.email "mycorreo@domain.com"
 ```
 
 ###Configurar el Editor para Git

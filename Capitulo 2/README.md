@@ -121,7 +121,7 @@ Changes not staged for commit:
 ```
 Nos podemos dar cuenta que el arcihvo index.js se encuentra bajo la seccion de "Changes not staged for commit:", lo cual significa que el archivo que estamos monitoreando a sido modificado pero aun no esta Staged.
 
-Para pasar el archivo a la seccion Staged debemos ejecutar de nuevo la instraccion __$ git add __ (Si! , esta instruccion sirve para varios propositos). Hagamos el ejersicio, executemos un git add y un git status.
+Para pasar el archivo a la seccion Staged debemos ejecutar de nuevo la instraccion __$ git add__ (Si! , esta instruccion sirve para varios propositos). Hagamos el ejersicio, executemos un git add y un git status.
 
 ```
 $ git add index.js

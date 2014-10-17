@@ -38,8 +38,17 @@ __Nota__ : Git puede utilizar varios tipo de protocolos de transmision. En los e
 
 #Guardar los Cambios en el Repositorio Git
 
+El proceso y la parte mas importante que deben tener siempre presente en Git es que los archivos de tu proyecto pueden estar en dos estados __tracked (monitoreados)__ y __untracked (no-monitoreados)__ .
 
+* Archivos Monitoreados : Son archivos que estuvieron en la ultima foto (snapshot) que se paso al repositorio Git. Estos archivos pueden estar en el estado __no modificados,  modificados y staged__.
+
+* Archivos No-Monitoreados : Son todos los archivos que no son Monitoreados. En otras palabras archivos que no han sido marcados como rasteables (Staging) en Git.
+
+Cada vez que se modifique un archivo monitoreado por Git. El sistema lo marca como __modificado__, por que ya es una copia diferente. Lo que el usuario tiene que hacer es pasar al __Staged__ y despues hacer un __Commit__. Este ciclo se repite una y otra vez.
 
 <img src="git-lifecycle.png" width="600">
+
+###Revisar el estatus de tus archivos 
+
 
   

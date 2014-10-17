@@ -152,7 +152,7 @@ Este es un ejemplo de un archivo __.gitignore__ :
 # pero si monitorea el que se llame lib.a, a pesar que estoy ignorando todos los archivo .a
 !lib.a
 # solamente ignora el archivo TODO en el directorio raiz , pero si subdir/TODO
-/TODO
+/TODO 
 # ignora todo los archivos en el directorio build/
 build/
 # ignora doc/notes.txt, pero no doc/server/arch.txt
@@ -161,7 +161,62 @@ doc/*.txt
 doc/**/*.txt
 ```
 
-###
+###Visualizar tu cambios entre Staged y Non-Staged
+
+La pregunta mas comun que un se hace es como puede ver que cambios voy a afectar entre los archivos. Es decir como vas a ver el verdadero impacto. Para esto se necesita una herramienta de comparacion y para eso Git integra la instruccion __ $ git diff__.
+
+Esta instraccion es muy util, nos ayuda a indetificar los cambios y evitar error al momento de hacer un commit. Por ejemplo, vamos a agregar una line a nuestro archivo de __README__.
+```
+$ git diff
+diff --git a/README b/README
+index e69de29..a19abfe 100644
+--- a/README
++++ b/README
+@@ -0,0 +1 @@
++Hola
+```
+
+Como pueden ver la instruccion diff por si solo nos arroja la comparacion entre el archivo __a__ (el cual es el de repositorio) y el archivo __b__(el cual es el que modificamos). Como se pueden dar cuenta es muy claro que agregamos la palabra "Hola" al archivo.
+
+Ahora supongamos que agregamos el archivo a la seccion de __Staged__. Y agremamos agregamos otro mensaje a nuestro archivo README.
+
+```
+$ git add README
+$ echo "Hola de nuevo" >> README
+$ cat README
+Hola
+Hola de nuevo
+
+```
+
+Si executamos la instruccion __$ git diff __, nos va a mostrar los cambios entre el archivo en estatus modificado y la ultima foto en el repositorio. Pero que pasa si queremos comparar el archivo __Staged__ y el ultimo __Commit__. Para lograr esto necesitamos utilizar la instruccion __$ git diff --cached__ o __$ git diff --staged__ (la opcion --staged esta activa a partir de la version 1.6.1 de Git). A continuacion mostramos la diferencia entre los dos diff para un mejor entendimiento.
+
+* __ $ git diff__:
+```
+$ git diff
+diff --git a/README b/README
+index a19abfe..4b9dea0 100644
+--- a/README
++++ b/README
+@@ -1 +1,2 @@
+ Hola
++Hola de nuevo
+
+```
+
+* __ $ git diff --staged__:
+```
+$ git diff --staged
+diff --git a/README b/README
+index e69de29..a19abfe 100644
+--- a/README
++++ b/README
+@@ -0,0 +1 @@
++Hola
+```
+
+
+
 
 
 

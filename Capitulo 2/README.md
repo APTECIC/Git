@@ -68,7 +68,7 @@ On branch master
 Your branch is up-to-date with 'origin/master'.
 
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+  (use "git add < file >..." to include in what will be committed)
 
 	README
 
@@ -77,6 +77,31 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Como se pueden dar cuenta Git te esta notificando que el archivo que creamos __README__ esta en el estatus de __Archivo No-Monitoreado (Untracked)__. Esto significa que Git sabe que hay un archivo nuevo pero no lo va a monitorear si no se le indica explicitamente. Esto se hace como precaucion para no agregar accidentalmente archivos inecesarios.
 
+### Monitorear los Archivos
+
+Para poder agregar el archivo __README__ como archivo monitoreado (Tracked) necesitamos ejecutar la instruccion __$ git add__.
+
+```
+$ git add README
+
+```
+
+Ahora veamos que pasa si ejecutamos un __$ git status__.
+
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD < file >..." to unstage)
+
+	new file:   README
+```
+
+Nos podemos dar cuenta que el archivo esta __Staged__ por que esta en la seccion "Changes to be committed:".
+
+__Nota__: Si realizamos un Commit en este momento, la version del archivo al momento de haber ejecutado el __$ git add__ es la version que se va a registrar.
 
 
 

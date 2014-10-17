@@ -83,7 +83,6 @@ Para poder agregar el archivo __README__ como archivo monitoreado (Tracked) nece
 
 ```
 $ git add README
-
 ```
 
 Ahora veamos que pasa si ejecutamos un __$ git status__.

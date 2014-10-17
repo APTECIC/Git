@@ -133,9 +133,35 @@ Your branch is ahead of 'origin/master' by 1 commit.
 Changes to be committed:
   (use "git reset HEAD < file >..." to unstage)
 
+	new file:   README
 	modified:   index.js
 ```
 
+###Ignorar Archivos 
+
+Es muy comun que cuando ejecutamos nuestro codigo genere archivos que no queremos agregar a nuestro repositorio. Por ejemplo los arhicov *.log , archivos de output, archivos temporales, etc. Git nos proporciona una forma de evitar la molestia de ver este tipo de archivos en estado como no __Archivo No-Monitoreado (Untracked)__. Para esto existe el archivo __.gitignore__.
+
+__.gitignore__ es un simple archivo de texto donde podemo especificar que tipo de archivos o nombre de archivo no queremos rastrear.
+
+Este es un ejemplo de un archivo __.gitignore__ :
+
+```
+# es un comentario - esto es ignorado por Git
+# Descarta todos los archivo que terminen con .a
+*.a
+# pero si monitorea el que se llame lib.a, a pesar que estoy ignorando todos los archivo .a
+!lib.a
+# solamente ignora el archivo TODO en el directorio raiz , pero si subdir/TODO
+/TODO
+# ignora todo los archivos en el directorio build/
+build/
+# ignora doc/notes.txt, pero no doc/server/arch.txt
+doc/*.txt
+# ignora todos los .txt en el directorio doc/ 
+doc/**/*.txt
+```
+
+###
 
 
 

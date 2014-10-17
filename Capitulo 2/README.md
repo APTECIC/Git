@@ -50,5 +50,60 @@ Cada vez que se modifique un archivo monitoreado por Git. El sistema lo marca co
 
 ###Revisar el estatus de tus archivos 
 
+La herramienta que te va ayudar a identificar en que estatus se encuentran los archivos (Untrack, Track, Modified, Staged) es la funcion __$ git status__. Despues de haber hecho nuestro primer commit o clonado un repositorio, nos va a mostrar el siguiente mensaje : 
+
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+```
+
+Lo que significa es que tenemos un repositorio limpio, no hay ningun cambio y todos los archivos estan siendo monitoreados. Ahora agregemos a nuestro directorio un archivo llamado __README__ y ejecutemos de nuevo el __$ git status__.
+
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Como se pueden dar cuenta Git te esta notificando que el archivo que creamos __README__ esta en el estatus de __Archivo No-Monitoreado (Untracked)__. Esto significa que Git sabe que hay un archivo nuevo pero no lo va a monitorear si no se le indica explicitamente. Esto se hace como precaucion para no agregar accidentalmente archivos inecesarios.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   

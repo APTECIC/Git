@@ -189,7 +189,7 @@ Hola de nuevo
 
 ```
 
-Si executamos la instruccion __$ git diff __, nos va a mostrar los cambios entre el archivo en estatus modificado y la ultima foto en el repositorio. Pero que pasa si queremos comparar el archivo __Staged__ y el ultimo __Commit__. Para lograr esto necesitamos utilizar la instruccion __$ git diff --cached__ o __$ git diff --staged__ (la opcion --staged esta activa a partir de la version 1.6.1 de Git). A continuacion mostramos la diferencia entre los dos diff para un mejor entendimiento.
+Si executamos la instruccion __$ git diff__ , nos va a mostrar los cambios entre el archivo en estatus modificado y la ultima foto en el repositorio. Pero que pasa si queremos comparar el archivo __Staged__ y el ultimo __Commit__. Para lograr esto necesitamos utilizar la instruccion __$ git diff --cached__ o __$ git diff --staged__ (la opcion --staged esta activa a partir de la version 1.6.1 de Git). A continuacion mostramos la diferencia entre los dos diff para un mejor entendimiento.
 
 * __ $ git diff__:
 ```

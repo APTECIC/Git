@@ -103,7 +103,38 @@ Nos podemos dar cuenta que el archivo esta __Staged__ por que esta en la seccion
 __Nota__: Si realizamos un Commit en este momento, la version del archivo al momento de haber ejecutado el __$ git add__ es la version que se va a registrar.
 
 
+###Mandar a Staged archivos Modificados
 
+Ahora que pasa cuando modificamos un archivo que Git si esta monitoreando. Por ejemplo, digamos que tenemos un archivo llamado index.js y realizamos una actualizacion al codigo. Ahora executemos un __$ git status__.
+
+```
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add < file >..." to update what will be committed)
+  (use "git checkout -- < file >..." to discard changes in working directory)
+
+	modified:   index.js
+```
+Nos podemos dar cuenta que el arcihvo index.js se encuentra bajo la seccion de "Changes not staged for commit:", lo cual significa que el archivo que estamos monitoreando a sido modificado pero aun no esta Staged.
+
+Para pasar el archivo a la seccion Staged debemos ejecutar de nuevo la instraccion __$ git add __ (Si! , esta instruccion sirve para varios propositos). Hagamos el ejersicio, executemos un git add y un git status.
+
+```
+$ git add index.js
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD < file >..." to unstage)
+
+	modified:   index.js
+```
 
 
 

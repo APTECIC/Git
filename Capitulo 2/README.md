@@ -267,11 +267,35 @@ $ git rm README index.js
 
 Para finalizar tendremos que hacer un commit para tomar una foto (snapshot) para borrar los archivos.
 
+### Movimiento de archivos
 
+Git no mantiene los movientos de archivos explicitamente. Por ejemplo si tu le cambias un nombre a un archivo Git no mantiene informacion de metadata que le ayude a saber que el archivo es el mismo pero que simplemente cambio de nombre.
 
+Git tiene la funcion de __mv__ , por ejemplo:
 
+```
+$ git mv < archivo_original > < nuevo_nombre >
+```
 
+por ejemplo si cambiamos el nombre al archivo README a README.md
 
+```
+$ git mv README README.md
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD < file >..." to unstage)
+
+        renamed:    README -> README.md 
+```
+
+Esta instruccion seria equivalente a los siguientes pasos : 
+
+```
+$ mv README README.md
+$ git rm README
+$ git add README.md
+```
 
 
 

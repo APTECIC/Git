@@ -214,8 +214,26 @@ index e69de29..a19abfe 100644
 @@ -0,0 +1 @@
 +Hola
 ```
+###Vamos a hacer Commits !!
 
+Ahora que ya tenemos archivos localizados en el zona Staged, podemos proceder a guardar nuestros cambios en Git con un commit.Es importante mencionar que todos los archivos modificados o actualizados que no hallan pasado por un __$ git add__ no va a ser registrado en Git. Siempre es recomendable revisar el estado de tus archivo con un __$ git status__ para estar seguro que es lo que vamos a guardar. La forma mas ejecutar un Commit es de la siguiente manera : 
 
+```
+$ git commit -m < mensaje >
+```
+
+Cada commit debe ir acompañado de un mensaje claro especificando que cambios se han guardad, por lo regular se meneja en terminos de Bug fix o addiciones.Vamos a agregar un commit inicial.
+
+```
+$ git commit -m "Agregando archivos README y index.js"
+[master 383c80f] Agregando archivos README y index.js
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README
+ create mode 100644 index.js
+```
+Como pueden ver una vez finalizado el Commit, nos da informacion sobre el si mismo. Como por ejemplo en que branch (master) y el SHA-1 generado (393c80f), cuantos archivos fueron agregados y informacion adicional.
+
+__Nota:__ Hay que siempre tener en cuenta que los Commits toman una foto (snapshot) de los archivos que estan en la seccion de Staged. 
 
 
 

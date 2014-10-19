@@ -235,6 +235,40 @@ Como pueden ver una vez finalizado el Commit, nos da informacion sobre el si mis
 
 __Nota:__ Hay que siempre tener en cuenta que los Commits toman una foto (snapshot) de los archivos que estan en la seccion de Staged. 
 
+## Remover archivos 
+
+Muy bien, ahora tenemos entendido el proceso de agregar archivos pasarlos a la seccion Staged y hacer un Commit. Pero que pasa cuando eliminamos un archivo. Por ejemplo vamos a eliminar nuestros dos archivos README e index.js.
+
+```
+$ rm README index.js 
+```
+Ahora veamos que resultado obtenemos si mandamos llamar un __$ git status__
+
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm < file >..." to update what will be committed)
+  (use "git checkout -- < file >..." to discard changes in working directory)
+
+  deleted:    README
+  deleted:    index.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Para poder remover un archivo en Git, tenemos que eliminarlo de la seccion como archivos monitoreados(Tracked). El comando __$ git rm__ hace presisamente eso y a su vez elimina el archivo del directorio. Si simplemente borramos el archivo nos va aparecer como el mensaje siguiente como un archivo modificado. Entonces si ejecutamos la siguiente instruccion eliminaremos los archivo y no seran monitoreados.
+
+```
+$ git rm README index.js
+```
+
+Para finalizar tendremos que hacer un commit para tomar una foto (snapshot) para borrar los archivos.
+
+
+
 
 
 

@@ -296,11 +296,86 @@ $ mv README README.md
 $ git rm README
 $ git add README.md
 ```
+# Visualizar tus Commits y visualizar tu historia. 
+
+Despues de haber hecho varios Commits o haber clonado un repositorio con historial de Commits, es muy probable que queramos ver el progreso y ver el historial de progreso.
+
+La herramienta mas basica y poderoza para hacer esto es con la instruccion __$ git log__.
+
+Veamos el siguiente ejemplo:
+```
+$ git clone git://github.com/schacon/simplegit-progit.git
+Cloning into 'simplegit-progit'...
+remote: Counting objects: 13, done.
+remote: Total 13 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (13/13), done.
+Resolving deltas: 100% (3/3), done.
+Checking connectivity... done.
+$ cd simplegit-progit/
+$ git log
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gmail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the verison number
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon <schacon@gmail.com>
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    removed unnecessary test code
+
+commit a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon <schacon@gmail.com>
+Date:   Sat Mar 15 10:31:28 2008 -0700
+
+    first commit
+
+```
+
+__Git log__ es una herramienta muy poderosa que puede aceptar multiples parametros. Pero la opcion mas famosa es __format__ que te permite crear tus propio output.
+
+A continuacion enlistamos las opciones mas utilizadas.
+
+| Opcion    | Descripcion  | 
+|-----------|--------------|
+| %H        | Commit hash  |
+| %h        | Abreviacion del Commit hash  |
+| %T        | Tree hash  |
+| %t        | Abreviacion Tree hash  |
+| %P        | hash Padre  |
+| %p        | Abreviacion de hash Padre  |
+| %an       | Nombre del Autor  |
+| %ae       | Correo Electronico Autor  |
+| %ad       | Fecha de Autor  |
+| %ar       | Fecha de Autor, relativa  |
+| %cn       | Nombre quien hizo Commit  |
+| %ce       | Correo Electronico quien hizo Commit  |
+| %cd       | Fecha quien hizo Commit  |
+| %cr       | Fecha quien hizo Commit Relativa |
+| %s        | Mensaje |
 
 
+### Limitar Log Output
+
+Si queremos limitar el output podemos hacerlo a travez de la opcion __--since__. Por ejemplo:
+
+```
+$ git log --since=2.weeks
+```
+Estas son otras de las opciones que puedes utilizar:
+| Opcion    | Descripcion  | 
+|-----------|--------------|
+| -(n)      | Mostrar unicamente los ultimos n Commits  |
+| --author  | Mostrar unicamente Commits que conicida con el author y el String   |
 
 
+Ahora que conosemos las opciones vamos a correr este ejemplo:
 
+```
+$ git log log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+$ git log  --after="2013-04-29T17:07:22+0200" --before="2013-04-29T17:07:22+0200" --pretty=fuller
+```
 
 
 

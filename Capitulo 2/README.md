@@ -364,6 +364,7 @@ Si queremos limitar el output podemos hacerlo a travez de la opcion __--since__.
 $ git log --since=2.weeks
 ```
 Estas son otras de las opciones que puedes utilizar:
+
 | Opcion    | Descripcion  | 
 |-----------|--------------|
 | -(n)      | Mostrar unicamente los ultimos n Commits  |

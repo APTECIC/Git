@@ -378,6 +378,48 @@ $ git log log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 $ git log  --after="2013-04-29T17:07:22+0200" --before="2013-04-29T17:07:22+0200" --pretty=fuller
 ```
 
+# Revertir cambios en Git 
+
+Uno de los situaciones mas communes es cuando realizamos un commit y se nos olvido agregar un archivo a la seccion de Staged. Tambien existe la situacion cuando agregamos un archivo en la seccion de Staged y lo queremos regresar al estado de Modificado. A contunuacion explicaremos como lo podemos hacer. 
+
+### Cambiar el ultimo Commit 
+
+Es muy comun que realizemos un Commit antes de tiempo y olvidemos agregar un archivo o simplemente nuestro mensaje de Commit esta equivocado para estas sutiaciones existe la opcion __--amend__. Veamoslo en un ejemplo:
+
+```
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+```
+
+En el ejemplo anterior, se nos olvio agregar un archivo con la opcion amend tomara todo lo que esta la seccion de Staged y reemplazara el ultimo Commit con uno nuevo.
+
+### Remover archivos de la seccion Staged 
+
+Tambien es muy comun que accidentalmente agregemos archivos en la seccion de Staged que un no estamos listos para hacer un commit. Para revertir esto tenemos la opcion de utilizar __$ git reset HEAD < nombre del archivo >__. Veamos un ejemplo, supongamos que tenemos el archivo README en la seccion de Staged y queremos removerlo, esta seria la secuencia de pasos.
+
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD < file >..." to unstage)
+
+  new file:   README
+
+$ git reset HEAD README
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add < file >..." to include in what will be committed)
+
+  README
+
+```
+
 
 
 

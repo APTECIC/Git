@@ -420,6 +420,19 @@ Untracked files:
 
 ```
 
+# Git Tag
+
+Git te da la habilidad de poner una marca o Tag a un Commit importante en la historia. Es muy frecuente utilizar esta herramienta para marcar una version en el codigo (__v0.1__). 
+
+Para mostrar la lista de tag :
+```
+$ git tag -l -n
+```
+
+Para crear un tag :
+```
+$ git tag -a v1.0 -m "nombre de version"
+```
 
 
 

@@ -11,3 +11,6 @@ Tabla de Contenido
 * [Capitulo 3 - Git Branching](Capitulo 3/README.md)
 * [Capitulo 4 - Git Distribuido](Capitulo 4/README.md)
 * [Appendice A - Recuersos Adicionales](Appendice A/README.md)
+
+
+[Requerimientos](https://gist.github.com/a-covar/5818e5585df9b1013fe1)

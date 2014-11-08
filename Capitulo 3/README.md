@@ -105,6 +105,14 @@ Para eliminar una branch es muy sencillo, con la siguiente instruccion.
 $git branch -d < nombre branch > 
 ```
 
+## Lista de Branch
+
+Para ver cuantos nuemeros de branches existen.
+```
+$ git branch 
+```
+Va a marcar con un (*) el branch donde estamos actualmente.
+
 ## Mergin Branch 
 
 Ahora vamos a relizar un nuevo branch completamente de cero. Supongamos que tenemos un problema con nuestra pagina y nuestro sistema de rastreo de problemas a sido assignado el numero iss53. Entonces vamos a crear un branch con ese nombre.
@@ -168,7 +176,29 @@ y como resultado tendremos el siguiente arbol:
 
 <img src="basic-merging-2.png" width="400px">
 
-__NOTA__ : Es muy comun que al estar realizando Merges y Branches Git detecte Conflictos para esto tendras que usar una herramienta para resolver esto. La mas comun es la que biene con git llamada __mergetool__.
+__NOTA__ : Es muy comun que al estar realizando Merges y Branches Git detecte Conflictos para esto tendras que usar una herramienta para resolver esto. La mas comun es la que biene con git llamada __mergetool__. 
+
+
+## Resolver Conflictos de Merge Manualmente
+
+Para resolver los conflictos de un merge tienes que realizar la edicion del decumento que para poder determinar cual cambio es el que deseas. 
+
+Para saber cual archivo es el que tiene tu problema
+```
+$ git status
+```
+
+Un vez que decides que parte vas a conservar (<<<<<<< HEAD,>>>>>>> nombre). Git te muestra donde esta el conflicto y por simple eliminacion y guardar puedes escoger entre cual opcion vamos a guardar.
+
+```index.html
+<<<<<<< HEAD
+  puts 'hola world'
+=======
+  puts 'hello mundo'
+>>>>>>> mundo
+```
+
+una vez que guardemos el cambio , realizamos un __git status__ y vemos que aun no esta listo para confirmar que esta listo para hacer un merge, tenemos que hacer un __git add index.html__ y despues un __git commit__
 
 
 

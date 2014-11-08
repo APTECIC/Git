@@ -81,8 +81,7 @@ Ahora si deseamos regresar al branch __master__ lo podemos hacer con el mismo co
 $git checkout master
 ```
 
-
-<img src="checkout-master.png" with='400px'>
+<img src="checkout-master.png" with='500px'>
 
 NOTA IMPORTANTE : Recuerda que cada vez que cambiemos de branch. Los archivos en el directorio van modificarse deacuerdo al estado del commit. 
 
@@ -156,13 +155,13 @@ $ git commit -m"Added notas.txt"
 ```
 
 Como resultado nuestro arbol seria lago asi: 
-<img src="basic-branching-6.png" width="400px">
+<img src="basic-branching-6.png" width="500px">
 
 Ahora supongamos que ya terminamos nuestro trabajo y estamos listos para agregar nuestro nuevo codigo al main branch. 
 
 Para poder unir ambos branch tenemos que tener en cuenta que primero tenemos que colocanos en el master branch por que es a donde queremos agregar los cambios. Despues de esto ya podemos seccionar que branch vamos a unir.
 
-<img src='basic-merging-1.png' width="400px">
+<img src='basic-merging-1.png' width="500px">
 
 Lo que tenemos que hacer es hacer los siguientes pasos :
 
@@ -174,7 +173,7 @@ $ git merge iss53
 
 y como resultado tendremos el siguiente arbol:
 
-<img src="basic-merging-2.png" width="400px">
+<img src="basic-merging-2.png" width="500px">
 
 __NOTA__ : Es muy comun que al estar realizando Merges y Branches Git detecte Conflictos para esto tendras que usar una herramienta para resolver esto. La mas comun es la que biene con git llamada __mergetool__. 
 

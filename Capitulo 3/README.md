@@ -60,10 +60,49 @@ Para poder movernos a nuestro branch llamado __test__ tenemos que hacer la sigui
 $git checkout < branch >
 ```
 
-Esta instruccion mueve el cabezar __HEAD___ al commit del nuevo branch.
+Esta instruccion mueve el cabezar __HEAD__ al commit del nuevo branch.
 
-<img src="head-to-testing.png" witd="500px">
+<img src="head-to-testing.png" with="500px">
 
+Ahora si creamos un archivo nuevo y hagamos un commit 
+```
+$touch test.txt
+$git add test.txt
+$git commit -m"Nuevo Archivo"
+```
+
+El branch __test__ va a tener un nuevo commit y el apuntado __HEAD__ va a avanzar junto con el. En este caso el branch __master__ se quedo atras. 
+
+<img src="advance-testing.png" with="500px">
+
+Ahora si deseamos regresar al branch __master__ lo podemos hacer con el mismo commando __$git checkout__
+
+```
+$git checkout master
+```
+
+<img src="checkout-master.png" with='400px'>
+
+NOTA IMPORTANTE : Recuerda que cada vez que cambiemos de branch. Los archivos en el directorio van modificarse deacuerdo al estado del commit. 
+
+Ahora para poder ver como se encuentra nuetro arbol realizemos un $git log para que como nos aparacer. deberan tener algo parecido a los siguiente:
+
+```
+$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) made other changes
+| * 87ab2 (testing) made a change
+|/
+* f30ab add feature #32 - ability to add new formats to the
+* 34ac2 fixed bug #1328 - stack overflow under certain conditions
+* 98ca9 initial commit of my project
+```
+
+## Borrar un Branch 
+
+Para eliminar una branch es muy sencillo, con la siguiente instruccion. 
+```
+$git branch -d < nombre branch > 
+```
 
 
 

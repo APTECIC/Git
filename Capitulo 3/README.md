@@ -138,8 +138,8 @@ $ git commit -a -m 'finished the new footer [issue 53]'
 1 file changed, 1 insertion(+)
 ```
 Y como resultado nuestro arbol va a estar de la siguiente manera.
+<img src="basic-branching-3.png" width="500px">
 
-<img src"basic-branching-3.png" width="400px">
 
 Ahora para hacer las cosas un poco interesante , regresemos al master branch y creemos un archivo note.txt y hagamos un commit . Lo mismo vamos a hacer con el branch iss53 pero lo vamos a nombrar notas.txt.
 

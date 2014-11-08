@@ -23,7 +23,7 @@ Pero cada vez que realizamos un commit nuevo tenemos un apuntador (llamado HEAD)
 
 <img src="branch-and-history.png" with="500px">
 
-# Crear un nuevo Branch
+## Crear un nuevo Branch
 
 Para poder crear un nuevo branch tenemos que ejecutar la siguiente instruccion.
 
@@ -31,6 +31,40 @@ Para poder crear un nuevo branch tenemos que ejecutar la siguiente instruccion.
 $git branch < nombre >
 ```
 Esta instruccion creara un nuevo commit al apuntador en donde te encuentras realmente.
+
+Por ejemplo, creemos un branch llamado __test__
+```
+$git branch test
+```
+Como resultado tendriamos algo asi.
+
+<img src="two-branches.png" with="500px">
+
+Pero como sabe Git a que commit estoy apundando ? bueno la respuesta es sencilla Git siempre va apuntar al branch del cual esta copiando. Ahora que tienes un branch a continuacion vamos a cambiarlo y modificarlo.
+
+## Intercambiar entre Branches
+
+En estos momentos nuestro projecto se encuentra de la siguiente manera.
+
+<img src="head-to-master.png" with="500px">
+
+y lo pueden ver con un git log 
+
+```
+$git log --oneline --decorate
+```
+
+Para poder movernos a nuestro branch llamado __test__ tenemos que hacer la siguiente instruccion 
+
+```
+$git checkout < branch >
+```
+
+Esta instruccion mueve el cabezar __HEAD___ al commit del nuevo branch.
+
+<img src="head-to-testing.png" witd="500px">
+
+
 
 
 

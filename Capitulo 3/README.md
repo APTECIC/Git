@@ -60,11 +60,28 @@ Para poder movernos a nuestro branch llamado __test__ tenemos que hacer la sigui
 $git checkout < branch >
 ```
 
-Esta instruccion mueve el cabezar __HEAD___ al commit del nuevo branch.
+Esta instruccion mueve el cabezar __HEAD__ al commit del nuevo branch.
 
-<img src="head-to-testing.png" witd="500px">
+<img src="head-to-testing.png" with="500px">
 
+Ahora si creamos un archivo nuevo y hagamos un commit 
+```
+$touch test.txt
+$git add test.txt
+$git commit -m"Nuevo Archivo"
+```
 
+El branch __test__ va a tener un nuevo commit y el apuntado __HEAD__ va a avanzar junto con el. En este caso el branch __master__ se quedo atras. 
+
+<img src="advance-testing.png" with="500px">
+
+Ahora si deseamos regresar al branch __master__ lo podemos hacer con el mismo commando __$git checkout__
+
+```
+$git checkout master
+```
+
+<img src="checkout-master.png" with='400px'>
 
 
 

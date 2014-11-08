@@ -81,7 +81,95 @@ Ahora si deseamos regresar al branch __master__ lo podemos hacer con el mismo co
 $git checkout master
 ```
 
+
 <img src="checkout-master.png" with='400px'>
+
+NOTA IMPORTANTE : Recuerda que cada vez que cambiemos de branch. Los archivos en el directorio van modificarse deacuerdo al estado del commit. 
+
+Ahora para poder ver como se encuentra nuetro arbol realizemos un $git log para que como nos aparacer. deberan tener algo parecido a los siguiente:
+
+```
+$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) made other changes
+| * 87ab2 (testing) made a change
+|/
+* f30ab add feature #32 - ability to add new formats to the
+* 34ac2 fixed bug #1328 - stack overflow under certain conditions
+* 98ca9 initial commit of my project
+```
+
+## Borrar un Branch 
+
+Para eliminar una branch es muy sencillo, con la siguiente instruccion. 
+```
+$git branch -d < nombre branch > 
+```
+
+## Mergin Branch 
+
+Ahora vamos a relizar un nuevo branch completamente de cero. Supongamos que tenemos un problema con nuestra pagina y nuestro sistema de rastreo de problemas a sido assignado el numero iss53. Entonces vamos a crear un branch con ese nombre.
+
+```
+$ git checkout -b iss53
+Switched to a new branch "iss53"
+```
+__NOTA__ : La opcion __-b__ es equivalente a la siguiente secuencia.
+```
+$ git branch iss53
+$ git checkout iss53
+```
+
+Ahora resulta que para poder reeglar ese problema tenmos que agreegr un archivo index.html para poder resolver el problema 
+
+```
+$ git checkout iss53
+Switched to branch "iss53"
+$ vim index.html
+$ git commit -a -m 'finished the new footer [issue 53]'
+[iss53 ad82d7a] finished the new footer [issue 53]
+1 file changed, 1 insertion(+)
+```
+Y como resultado nuestro arbol va a estar de la siguiente manera.
+
+<img src"basic-branching-3.png" width="400px">
+
+Ahora para hacer las cosas un poco interesante , regresemos al master branch y creemos un archivo note.txt y hagamos un commit . Lo mismo vamos a hacer con el branch iss53 pero lo vamos a nombrar notas.txt.
+
+```
+$ git checkout master 
+Switched to branch "master"
+$ touch note.txt
+$ git add note.txt
+$ git commit -m"Added note.txt"
+$ git checkout iss53
+Switched to branch "iss53"
+$ touch notas.txt
+$ git commit -m"Added notas.txt"
+```
+
+Como resultado nuestro arbol seria lago asi: 
+<img src="basic-branching-6.png" width="400px">
+
+Ahora supongamos que ya terminamos nuestro trabajo y estamos listos para agregar nuestro nuevo codigo al main branch. 
+
+Para poder unir ambos branch tenemos que tener en cuenta que primero tenemos que colocanos en el master branch por que es a donde queremos agregar los cambios. Despues de esto ya podemos seccionar que branch vamos a unir.
+
+<img src='basic-merging-1.png' width="400px">
+
+Lo que tenemos que hacer es hacer los siguientes pasos :
+
+```
+$ git checkout master 
+Switched to branch 'master'
+$ git merge iss53
+```
+
+y como resultado tendremos el siguiente arbol:
+
+<img src="basic-merging-2.png" width="400px">
+
+__NOTA__ : Es muy comun que al estar realizando Merges y Branches Git detecte Conflictos para esto tendras que usar una herramienta para resolver esto. La mas comun es la que biene con git llamada __mergetool__.
+
 
 
 

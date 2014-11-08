@@ -12,9 +12,25 @@ La siguiente imagen nos ayudara a enteneder un poco mejor el proceso:
 
 <img src="git_branch_overview.png" width="500px">
 
+
 En la siguiente imagen podemos ver como una secuencia de Commits y podemos ver como el Commit con el SHA __ba8ce__ crea un branch que puede ser una modificacion o mejora en el codigo. Uno puede continuar con el master Branch y despues de un tiempo podemos decidir cuando integrarlo.
 
-### Conceptos basicos de Branching y Merging
+Cuando realizamos un __commit__ Git realiza un checksum y almacena la metadata en una estructura de arbol y mantiene record de cada cambio. Esto es lo que permite a Git retorceder en el tiempo y regresar a un estado determinado. A continuacion un ejemplo:
+
+<img src="commit-and-tree.png" with="500px">
+
+Pero cada vez que realizamos un commit nuevo tenemos un apuntador (llamado HEAD) que nos indica en que posicion estamos.
+
+<img src="branch-and-history.png" with="500px">
+
+# Crear un nuevo Branch
+
+Para poder crear un nuevo branch tenemos que ejecutar la siguiente instruccion.
+
+```
+$git branch < nombre >
+```
+Esta instruccion creara un nuevo commit al apuntador en donde te encuentras realmente.
 
 
 

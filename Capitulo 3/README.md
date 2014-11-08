@@ -153,8 +153,8 @@ Switched to branch "iss53"
 $ touch notas.txt
 $ git commit -m"Added notas.txt"
 ```
+Como resultado tendremos algo como lo siguiente :
 
-Como resultado nuestro arbol seria lago asi: 
 <img src="basic-branching-6.png" width="500px">
 
 Ahora supongamos que ya terminamos nuestro trabajo y estamos listos para agregar nuestro nuevo codigo al main branch. 

@@ -2,7 +2,7 @@
 
 
 Recursos Adicionales
-==================
+====================
 
 * [Guia Rapida para commandos](git-cheat-sheet-education.pdf)
 * [Hosting paginas web en Git](https://pages.github.com/)

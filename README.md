@@ -20,4 +20,4 @@ Este curso es creado por APTECIC y el apoyo gratuito de las siguiente(s) persona
 * Jose Arturo Covarrubias (@a-covar)
 
 ### Licencia 
-El contenido de este curso esta bajo la [licencia de MIT](LICENCE). 
+El contenido de este curso esta bajo la [licencia de MIT](LICENCE.md). 

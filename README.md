@@ -25,8 +25,8 @@ Git es el Sistema de Control de Versiones mas utlizado en el mundo. Gracias a Gi
 
 ### Authors and Contributors
 Este curso es creado por APTECIC y el apoyo gratuito de las siguiente(s) persona(s):
-* Jose Arturo Covarrubias (@a-covar) ( :octocat:->[@a-covar](https://github.com/a-covar) ) [comment]: <> (Sensei)
-* Galindo Rosendo  ( :octocat:->[@galindoRosendo](https://github.com/galindoRosendo) ) [comment]: <> (Kohai)
+* Jose Arturo Covarrubias (@a-covar) ( :octocat:->[@a-covar](https://github.com/a-covar) )(Sensei)
+* Galindo Rosendo  ( :octocat:->[@galindoRosendo](https://github.com/galindoRosendo) )(Kohai)
 
 ### Licencia
 El contenido de este curso esta bajo la [licencia de MIT](LICENCE.md).
